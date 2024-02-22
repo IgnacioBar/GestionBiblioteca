@@ -19,10 +19,6 @@ public class Libro {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getAutor() {
         return autor;
     }
@@ -31,24 +27,12 @@ public class Libro {
         this.autor = autor;
     }
 
-    public int getAnioPublicacion() {
-        return anioPublicacion;
-    }
-
     public void setAnioPublicacion(int anioPublicacion) {
         this.anioPublicacion = anioPublicacion;
     }
 
-    public int getNumEjemplaresTotales() {
-        return numEjemplaresTotales;
-    }
-
     public void setNumEjemplaresTotales(int numEjemplaresTotales) {
         this.numEjemplaresTotales = numEjemplaresTotales;
-    }
-
-    public int getNumEjemplaresDisponibles() {
-        return numEjemplaresDisponibles;
     }
 
     public void setNumEjemplaresDisponibles(int numEjemplaresDisponibles) {
@@ -56,22 +40,6 @@ public class Libro {
     }
 
     // Métodos adicionales
-    public boolean prestar() {
-        if (numEjemplaresDisponibles > 0) {
-            numEjemplaresDisponibles--;
-            return true;
-        }
-        return false;
-    }
-
-    public boolean devolver() {
-        if (numEjemplaresDisponibles < numEjemplaresTotales) {
-            numEjemplaresDisponibles++;
-            return true;
-        }
-        return false;
-    }
-
     public boolean prestarEjemplar() {
         if (numEjemplaresDisponibles > 0) {
             numEjemplaresDisponibles--;
